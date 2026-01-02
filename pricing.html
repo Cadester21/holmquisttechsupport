@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holmquist Tech Support | Pricing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================
+     HEADER / NAV
+========================== -->
+<header>
+  <div class="header-brand">
+    <img src="images/logo.jpg" alt="Holmquist Tech Support Logo" class="logo">
+    <span class="site-name">Holmquist Tech Support</span>
+  </div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html" class="active">Pricing</a>
+  <a href="instructions.html" class="cta-nav">Before Your Call</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- =========================
+     STEP 1: PRICING
+========================== -->
+<section>
+  <div class="card">
+    <h2>Pricing</h2>
+    <p class="muted">
+      Simple, upfront pricing. If you’re unsure which option you need, I’ll help you choose during a free consultation.
+    </p>
+
+    <div class="pricing">
+      <!-- Quick Fix -->
+      <div class="price-box">
+        <h3>Quick Fix</h3>
+        <div class="price">$40</div>
+        <p>Best for small issues and quick help.</p>
+        <ul>
+          <li>Software install or update</li>
+          <li>Email/account setup help</li>
+          <li>Basic troubleshooting</li>
+          <li>Quick performance fixes</li>
+        </ul>
+        <a href="#payment" class="download-btn">Choose Quick Fix</a>
+      </div>
+
+      <!-- Full Session -->
+      <div class="price-box highlight">
+        <span class="badge">Most Popular</span>
+        <h3>Full Session</h3>
+        <div class="price">$60</div>
+        <p>Up to 1 hour of remote support.</p>
+        <ul>
+          <li>More complex troubleshooting</li>
+          <li>Virus/malware cleanup (basic)</li>
+          <li>Multiple issues in one session</li>
+          <li>Optimization & recommendations</li>
+        </ul>
+        <a href="#payment" class="download-btn">Choose Full Session</a>
+      </div>
+    </div>
+
+    <div class="security-box" style="margin-top: 22px;">
+      <strong>Free consultation:</strong> I’ll confirm the issue and pricing before any work begins.
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     STEP 2 DIVIDER
+========================== -->
+<div class="step-divider" id="payment">
+  <div class="step-pill">Step 2</div>
+  <h2 class="step-title">Secure Payment</h2>
+  <p class="muted step-sub">
+    Payment is only required after we confirm the issue and you’re ready to begin.
+  </p>
+</div>
+
+<!-- =========================
+     STEP 2: PAYMENT
+========================== -->
+<section>
+  <div class="card payment-section">
+
+    <div class="payment-grid">
+      <!-- Quick Fix Payment -->
+      <div class="payment-card">
+        <h3>Quick Fix — $40</h3>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="return validateCheckbox('agree1');">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="caden@holmquisttechsupport.com">
+          <input type="hidden" name="item_name" value="Quick Fix Tech Support">
+          <input type="hidden" name="amount" value="40.00">
+          <input type="hidden" name="currency_code" value="USD">
+
+          <label class="agree">
+            <input type="checkbox" id="agree1" required>
+            I have read and agree to the
+            <a href="service-agreement.html" target="_blank">Tech Support Service Agreement</a>
+          </label>
+
+          <button type="submit">Pay $40 — Quick Fix</button>
+        </form>
+      </div>
+
+      <!-- Full Session Payment -->
+      <div class="payment-card">
+        <h3>Full Session — $60</h3>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="return validateCheckbox('agree2');">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="caden@holmquisttechsupport.com">
+          <input type="hidden" name="item_name" value="Full Session Tech Support">
+          <input type="hidden" name="amount" value="60.00">
+          <input type="hidden" name="currency_code" value="USD">
+
+          <label class="agree">
+            <input type="checkbox" id="agree2" required>
+            I have read and agree to the
+            <a href="service-agreement.html" target="_blank">Tech Support Service Agreement</a>
+          </label>
+
+          <button type="submit">Pay $60 — Full Session</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================== -->
+<footer>
+  © 2025 Holmquist Tech Support • Serving Minnesota & Nationwide<br>
+  <a href="mailto:caden@holmquisttechsupport.com">caden@holmquisttechsupport.com</a>
+</footer>
+
+<script>
+function validateCheckbox(id) {
+  const checkbox = document.getElementById(id);
+  if (!checkbox.checked) {
+    alert('You must agree to the Service Agreement before paying.');
+    return false;
+  }
+  return true;
+}
+</script>
+
+</body>
+</html>
